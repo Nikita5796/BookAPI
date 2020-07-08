@@ -31,7 +31,7 @@ namespace BookApp.API.Controllers
             var user = _userService.Authenticate(userParam.EmailId, userParam.Password);
 
             if (user == null)
-                return BadRequest(new { message = "Username or password is incorrect" });
+                return BadRequest(new { message = "Username or password is incorrect" }); 
 
             return Ok(user);
         }
