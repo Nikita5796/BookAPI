@@ -74,14 +74,5 @@ namespace BookApp.API.Services
 
             return user;
         }
-
-        public IEnumerable<User> GetAll()
-        {
-            // return users without passwords
-            return _users.Select(x => {
-                x.Password = null;
-                return x;
-            });
-        }
     }
 }
